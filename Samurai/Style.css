@@ -1,0 +1,179 @@
+/* Общие стили для сайта */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; 
+    color: #00FFBF; 
+    font-family: 'Orbitron', sans-serif; 
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.logo {
+    font-size: 5em;
+    color: #FF3131; 
+    text-shadow: 0 0 20px #FF3131, 0 0 30px #FF3131;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+.tagline {
+    font-size: 1.5em;
+    color: #00FFBF;
+    text-shadow: 0 0 20px #00FFBF, 0 0 30px #00FFBF;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #00FFBF;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #00FFBF;
+    color: #000;
+    text-shadow: none;
+}
+
+/* Эффекты и стили для разделов */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #FF3131;
+    text-shadow: 0 0 20px #FF3131;
+}
+
+.album img, .bio-images img, .merch-items img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+/* Стили для изображений в биографии */
+.bio-images {
+    display: flex;
+    justify-content: center; /* Центрирование изображений по горизонтали */
+    gap: 20px; /* Отступы между изображениями */
+    flex-wrap: wrap; /* Позволяет переносить изображения на новую строку, если экран слишком узкий */
+}
+
+.bio-images figure {
+    text-align: center; /* Центрирует подписи под изображениями */
+}
+
+.bio-images img {
+    width: 150px;
+    height: auto;
+    border: 3px solid #FFFF00; /* Желтая рамка вокруг изображений */
+    border-radius: 8px; /* Закругленные углы рамки */
+    transition: transform 0.3s;
+}
+
+.bio-images img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); 
+}
+
+.track-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.track-list ul li {
+    padding: 5px 0;
+    color: #00FFBF;
+}
+
+.track-list ul li:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #00FFBF;
+}
+
+/* Стили для разделов с товарами и туром */
+.merch-items .item, .tour-dates li {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00FFBF;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.merch-items .item:hover, .tour-dates li:hover {
+    background-color: rgba(0, 255, 191, 0.2);
+    border-color: #FF3131;
+}
+
+table {
+    width: 80%; /* Задает ширину таблицы, чтобы она не занимала всю ширину экрана */
+    margin: 0 auto; /* Центрирует таблицу */
+    border-collapse: collapse; /* Убирает пробелы между границами */
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий оттенок для фона таблицы */
+}
+
+table, th, td {
+    border: 1px solid #00FFBF; /* Устанавливает цвет границ */
+    padding: 10px; /* Внутренние отступы */
+    text-align: center; /* Центрирует текст в ячейках */
+    color: #FFFFFF; /* Цвет текста */
+}
+
+thead {
+    background-color: rgba(0, 255, 191, 0.2); /* Фон для заголовка таблицы */
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 255, 191, 0.2); /* Подсветка строки при наведении */
+}
+
+/* Анимации для текста */
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 5px #00FFBF, 0 0 10px #00FFBF, 0 0 15px #00FFBF, 0 0 20px #00FFBF, 0 0 25px #00FFBF;
+    }
+    50% {
+        text-shadow: 0 0 10px #FFFFFF, 0 0 20px #00FFBF, 0 0 30px #00FFBF, 0 0 40px #00FFBF, 0 0 50px #00FFBF;
+    }
+    100% {
+        text-shadow: 0 0 5px #00FFBF, 0 0 10px #00FFBF, 0 0 15px #00FFBF, 0 0 20px #00FFBF, 0 0 25px #00FFBF;
+    }
+}
+
+
